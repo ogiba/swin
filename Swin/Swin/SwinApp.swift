@@ -10,6 +10,9 @@ import SwiftUI
 @main
 struct SwinApp: App {
     
+    init() {
+        Swin.startSwin(modules: [])
+    }
     
     var body: some Scene {
         WindowGroup {

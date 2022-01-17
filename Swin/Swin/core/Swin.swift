@@ -6,10 +6,22 @@
 //
 
 import Foundation
+import SwiftUI
 
 class Swin {
     
-    static func startSwin() {
-        let swin = Swin()
+    static var swin: Swin?
+    let modules: [String]
+    
+    init(modules: [String]) {
+        self.modules = modules
+    }
+    
+    static func startSwin(modules: [String]) {
+        if(swin == nil) {
+            let swin = Swin(modules: modules)
+            self.swin = swin
+        }
+        return
     }
 }
