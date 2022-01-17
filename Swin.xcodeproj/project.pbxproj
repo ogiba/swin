@@ -1,0 +1,584 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7A5FC51527960BB200BC7F80 /* SwinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5FC51427960BB200BC7F80 /* SwinApp.swift */; };
+		7A5FC51727960BB200BC7F80 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5FC51627960BB200BC7F80 /* ContentView.swift */; };
+		7A5FC51927960BB300BC7F80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A5FC51827960BB300BC7F80 /* Assets.xcassets */; };
+		7A5FC51C27960BB300BC7F80 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A5FC51B27960BB300BC7F80 /* Preview Assets.xcassets */; };
+		7A5FC52627960BB300BC7F80 /* SwinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5FC52527960BB300BC7F80 /* SwinTests.swift */; };
+		7A5FC53027960BB300BC7F80 /* SwinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5FC52F27960BB300BC7F80 /* SwinUITests.swift */; };
+		7A5FC53227960BB300BC7F80 /* SwinUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5FC53127960BB300BC7F80 /* SwinUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7A5FC52227960BB300BC7F80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A5FC50927960BB100BC7F80 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7A5FC51027960BB200BC7F80;
+			remoteInfo = Swin;
+		};
+		7A5FC52C27960BB300BC7F80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A5FC50927960BB100BC7F80 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7A5FC51027960BB200BC7F80;
+			remoteInfo = Swin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7A5FC51127960BB200BC7F80 /* Swin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A5FC51427960BB200BC7F80 /* SwinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinApp.swift; sourceTree = "<group>"; };
+		7A5FC51627960BB200BC7F80 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7A5FC51827960BB300BC7F80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7A5FC51B27960BB300BC7F80 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7A5FC52127960BB300BC7F80 /* SwinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A5FC52527960BB300BC7F80 /* SwinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinTests.swift; sourceTree = "<group>"; };
+		7A5FC52B27960BB300BC7F80 /* SwinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A5FC52F27960BB300BC7F80 /* SwinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinUITests.swift; sourceTree = "<group>"; };
+		7A5FC53127960BB300BC7F80 /* SwinUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7A5FC50E27960BB200BC7F80 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A5FC51E27960BB300BC7F80 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A5FC52827960BB300BC7F80 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7A5FC50827960BB100BC7F80 = {
+			isa = PBXGroup;
+			children = (
+				7A5FC51327960BB200BC7F80 /* Swin */,
+				7A5FC52427960BB300BC7F80 /* SwinTests */,
+				7A5FC52E27960BB300BC7F80 /* SwinUITests */,
+				7A5FC51227960BB200BC7F80 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7A5FC51227960BB200BC7F80 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7A5FC51127960BB200BC7F80 /* Swin.app */,
+				7A5FC52127960BB300BC7F80 /* SwinTests.xctest */,
+				7A5FC52B27960BB300BC7F80 /* SwinUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7A5FC51327960BB200BC7F80 /* Swin */ = {
+			isa = PBXGroup;
+			children = (
+				7A5FC51427960BB200BC7F80 /* SwinApp.swift */,
+				7A5FC51627960BB200BC7F80 /* ContentView.swift */,
+				7A5FC51827960BB300BC7F80 /* Assets.xcassets */,
+				7A5FC51A27960BB300BC7F80 /* Preview Content */,
+			);
+			path = Swin;
+			sourceTree = "<group>";
+		};
+		7A5FC51A27960BB300BC7F80 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				7A5FC51B27960BB300BC7F80 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7A5FC52427960BB300BC7F80 /* SwinTests */ = {
+			isa = PBXGroup;
+			children = (
+				7A5FC52527960BB300BC7F80 /* SwinTests.swift */,
+			);
+			path = SwinTests;
+			sourceTree = "<group>";
+		};
+		7A5FC52E27960BB300BC7F80 /* SwinUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7A5FC52F27960BB300BC7F80 /* SwinUITests.swift */,
+				7A5FC53127960BB300BC7F80 /* SwinUITestsLaunchTests.swift */,
+			);
+			path = SwinUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7A5FC51027960BB200BC7F80 /* Swin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A5FC53527960BB300BC7F80 /* Build configuration list for PBXNativeTarget "Swin" */;
+			buildPhases = (
+				7A5FC50D27960BB200BC7F80 /* Sources */,
+				7A5FC50E27960BB200BC7F80 /* Frameworks */,
+				7A5FC50F27960BB200BC7F80 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Swin;
+			productName = Swin;
+			productReference = 7A5FC51127960BB200BC7F80 /* Swin.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7A5FC52027960BB300BC7F80 /* SwinTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A5FC53827960BB300BC7F80 /* Build configuration list for PBXNativeTarget "SwinTests" */;
+			buildPhases = (
+				7A5FC51D27960BB300BC7F80 /* Sources */,
+				7A5FC51E27960BB300BC7F80 /* Frameworks */,
+				7A5FC51F27960BB300BC7F80 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7A5FC52327960BB300BC7F80 /* PBXTargetDependency */,
+			);
+			name = SwinTests;
+			productName = SwinTests;
+			productReference = 7A5FC52127960BB300BC7F80 /* SwinTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7A5FC52A27960BB300BC7F80 /* SwinUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A5FC53B27960BB300BC7F80 /* Build configuration list for PBXNativeTarget "SwinUITests" */;
+			buildPhases = (
+				7A5FC52727960BB300BC7F80 /* Sources */,
+				7A5FC52827960BB300BC7F80 /* Frameworks */,
+				7A5FC52927960BB300BC7F80 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7A5FC52D27960BB300BC7F80 /* PBXTargetDependency */,
+			);
+			name = SwinUITests;
+			productName = SwinUITests;
+			productReference = 7A5FC52B27960BB300BC7F80 /* SwinUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7A5FC50927960BB100BC7F80 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					7A5FC51027960BB200BC7F80 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					7A5FC52027960BB300BC7F80 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 7A5FC51027960BB200BC7F80;
+					};
+					7A5FC52A27960BB300BC7F80 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 7A5FC51027960BB200BC7F80;
+					};
+				};
+			};
+			buildConfigurationList = 7A5FC50C27960BB100BC7F80 /* Build configuration list for PBXProject "Swin" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7A5FC50827960BB100BC7F80;
+			productRefGroup = 7A5FC51227960BB200BC7F80 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7A5FC51027960BB200BC7F80 /* Swin */,
+				7A5FC52027960BB300BC7F80 /* SwinTests */,
+				7A5FC52A27960BB300BC7F80 /* SwinUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7A5FC50F27960BB200BC7F80 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A5FC51C27960BB300BC7F80 /* Preview Assets.xcassets in Resources */,
+				7A5FC51927960BB300BC7F80 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A5FC51F27960BB300BC7F80 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A5FC52927960BB300BC7F80 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7A5FC50D27960BB200BC7F80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A5FC51727960BB200BC7F80 /* ContentView.swift in Sources */,
+				7A5FC51527960BB200BC7F80 /* SwinApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A5FC51D27960BB300BC7F80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A5FC52627960BB300BC7F80 /* SwinTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A5FC52727960BB300BC7F80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A5FC53027960BB300BC7F80 /* SwinUITests.swift in Sources */,
+				7A5FC53227960BB300BC7F80 /* SwinUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7A5FC52327960BB300BC7F80 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7A5FC51027960BB200BC7F80 /* Swin */;
+			targetProxy = 7A5FC52227960BB300BC7F80 /* PBXContainerItemProxy */;
+		};
+		7A5FC52D27960BB300BC7F80 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7A5FC51027960BB200BC7F80 /* Swin */;
+			targetProxy = 7A5FC52C27960BB300BC7F80 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		7A5FC53327960BB300BC7F80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7A5FC53427960BB300BC7F80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7A5FC53627960BB300BC7F80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Swin/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ogiback.Swin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7A5FC53727960BB300BC7F80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Swin/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ogiback.Swin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7A5FC53927960BB300BC7F80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ogiback.SwinTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Swin.app/Swin";
+			};
+			name = Debug;
+		};
+		7A5FC53A27960BB300BC7F80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ogiback.SwinTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Swin.app/Swin";
+			};
+			name = Release;
+		};
+		7A5FC53C27960BB300BC7F80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ogiback.SwinUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Swin;
+			};
+			name = Debug;
+		};
+		7A5FC53D27960BB300BC7F80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ogiback.SwinUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Swin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7A5FC50C27960BB100BC7F80 /* Build configuration list for PBXProject "Swin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A5FC53327960BB300BC7F80 /* Debug */,
+				7A5FC53427960BB300BC7F80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A5FC53527960BB300BC7F80 /* Build configuration list for PBXNativeTarget "Swin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A5FC53627960BB300BC7F80 /* Debug */,
+				7A5FC53727960BB300BC7F80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A5FC53827960BB300BC7F80 /* Build configuration list for PBXNativeTarget "SwinTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A5FC53927960BB300BC7F80 /* Debug */,
+				7A5FC53A27960BB300BC7F80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A5FC53B27960BB300BC7F80 /* Build configuration list for PBXNativeTarget "SwinUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A5FC53C27960BB300BC7F80 /* Debug */,
+				7A5FC53D27960BB300BC7F80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7A5FC50927960BB100BC7F80 /* Project object */;
+}
