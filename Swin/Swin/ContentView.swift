@@ -8,6 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    let test = Swin.get(type: TestRepository.self)
+    
+    init() {
+        test.test()
+    }
+    
     var body: some View {
         Text("Hello, world!")
             .padding()

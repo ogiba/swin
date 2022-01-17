@@ -11,17 +11,53 @@ import SwiftUI
 class Swin {
     
     static var swin: Swin?
-    let modules: [String]
+    let modules: [Module]
     
-    init(modules: [String]) {
+    init(modules: [Module]) {
         self.modules = modules
     }
     
-    static func startSwin(modules: [String]) {
+    static func startSwin(modules: [Module]) {
         if(swin == nil) {
             let swin = Swin(modules: modules)
             self.swin = swin
         }
         return
+    }
+    
+    static func get<T>(type: T.Type) -> T  {
+        guard let _swin = swin else {
+            print(RuntimeError("test"))
+            exit(0)
+        }
+        
+        var expectedClass: T? = nil
+        _swin.modules.forEach { module in
+            module.factories.forEach { factory in
+                if (factory.clazz is T) {
+                    expectedClass = factory.clazz as? T
+                    return
+                }
+                return
+            }
+        }
+        
+        if (expectedClass == nil) {
+            print(RuntimeError("test"))
+            exit(0)
+        }
+        return expectedClass!
+    }
+}
+
+struct RuntimeError: Error {
+    let message: String
+
+    init(_ message: String) {
+        self.message = message
+    }
+
+    public var localizedDescription: String {
+        return message
     }
 }

@@ -11,7 +11,9 @@ import SwiftUI
 struct SwinApp: App {
     
     init() {
-        Swin.startSwin(modules: [])
+        Swin.startSwin(modules: [
+            Module().factory(clazz: TestRepository())
+        ])
     }
     
     var body: some Scene {
