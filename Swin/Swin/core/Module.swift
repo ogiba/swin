@@ -24,15 +24,3 @@ class Module: Hashable {
         return lhs === rhs
     }
 }
-
-class InstanceFactory {
-    let clazz: Any
-    
-    init(clazz: Any) {
-        self.clazz = clazz
-    }
-    
-    static func create<T>(clazz: T) -> InstanceFactory {
-        return InstanceFactory(clazz: clazz)
-    }
-}
