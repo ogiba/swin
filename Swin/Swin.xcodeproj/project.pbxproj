@@ -14,6 +14,7 @@
 		7A5FC52627960BB300BC7F80 /* SwinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5FC52527960BB300BC7F80 /* SwinTests.swift */; };
 		7A5FC53027960BB300BC7F80 /* SwinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5FC52F27960BB300BC7F80 /* SwinUITests.swift */; };
 		7A5FC53227960BB300BC7F80 /* SwinUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5FC53127960BB300BC7F80 /* SwinUITestsLaunchTests.swift */; };
+		7A5FC54027960D5B00BC7F80 /* Swin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5FC53F27960D5B00BC7F80 /* Swin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		7A5FC52B27960BB300BC7F80 /* SwinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A5FC52F27960BB300BC7F80 /* SwinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinUITests.swift; sourceTree = "<group>"; };
 		7A5FC53127960BB300BC7F80 /* SwinUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7A5FC53F27960D5B00BC7F80 /* Swin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		7A5FC51327960BB200BC7F80 /* Swin */ = {
 			isa = PBXGroup;
 			children = (
+				7A5FC53E27960D1700BC7F80 /* core */,
 				7A5FC51427960BB200BC7F80 /* SwinApp.swift */,
 				7A5FC51627960BB200BC7F80 /* ContentView.swift */,
 				7A5FC51827960BB300BC7F80 /* Assets.xcassets */,
@@ -125,6 +128,14 @@
 				7A5FC53127960BB300BC7F80 /* SwinUITestsLaunchTests.swift */,
 			);
 			path = SwinUITests;
+			sourceTree = "<group>";
+		};
+		7A5FC53E27960D1700BC7F80 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				7A5FC53F27960D5B00BC7F80 /* Swin.swift */,
+			);
+			path = core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A5FC51727960BB200BC7F80 /* ContentView.swift in Sources */,
+				7A5FC54027960D5B00BC7F80 /* Swin.swift in Sources */,
 				7A5FC51527960BB200BC7F80 /* SwinApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
