@@ -9,9 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     let test = Swin.get(type: TestRepository.self)
+    let test2 = Swin.inject(type: TestRepository.self)
     
     init() {
         test.test()
+        test2.value.test(value: <#T##Int#>)
+//        test.test(value: 1)
     }
     
     var body: some View {

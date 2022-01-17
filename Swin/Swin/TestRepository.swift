@@ -8,7 +8,7 @@
 import Foundation
 
 class TestRepository {
-    func test() {
-        print("Test")
+    func test(value: Int = 0) {
+        print("Test \(value)")
     }
 }
