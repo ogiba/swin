@@ -7,6 +7,8 @@
 
 import Foundation
 
+typealias Definition<T> = () -> T
+
 class InstanceFactory {
     let definition: Definition<Any>
     let clazzType: Any

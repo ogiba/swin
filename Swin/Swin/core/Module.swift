@@ -16,5 +16,3 @@ class Module {
         return self
     }
 }
-
-typealias Definition<T> = () -> T
