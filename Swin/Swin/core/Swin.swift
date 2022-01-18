@@ -34,8 +34,8 @@ class Swin {
         var expectedClass: T? = nil
         _swin.modules.forEach { module in
             module.factories.forEach { factory in
-                if (factory.clazz is T) {
-                    expectedClass = factory.clazz as? T
+                if (factory.clazzType is T.Type) {
+                    expectedClass = factory.definition() as? T
                     return
                 }
                 return
@@ -49,29 +49,29 @@ class Swin {
         return expectedClass!
     }
     
-    static func inject<T>(type: T.Type) -> Lazy<T>  {
-        guard let _swin = swin else {
-            print(RuntimeError("test"))
-            exit(0)
-        }
-        
-        var expectedClass: T? = nil
-        _swin.modules.forEach { module in
-            module.factories.forEach { factory in
-                if (factory.clazz is T) {
-                    expectedClass = factory.clazz as? T
-                    return
-                }
-                return
-            }
-        }
-        
-        if (expectedClass == nil) {
-            print(RuntimeError("test"))
-            exit(0)
-        }
-        return Lazy(initValue: expectedClass!)
-    }
+//    static func inject<T>(type: T.Type) -> Lazy<T>  {
+//        guard let _swin = swin else {
+//            print(RuntimeError("test"))
+//            exit(0)
+//        }
+//        
+//        var expectedClass: T? = nil
+//        _swin.modules.forEach { module in
+//            module.factories.forEach { factory in
+//                if (factory.clazz is T) {
+//                    expectedClass = factory.clazz as? T
+//                    return
+//                }
+//                return
+//            }
+//        }
+//        
+//        if (expectedClass == nil) {
+//            print(RuntimeError("test"))
+//            exit(0)
+//        }
+//        return Lazy(initValue: expectedClass!)
+//    }
 }
 
 struct Lazy<T> {

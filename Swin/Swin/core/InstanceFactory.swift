@@ -8,13 +8,18 @@
 import Foundation
 
 class InstanceFactory {
-    let clazz: Any
+    let definition: Definition<Any>
+    let clazzType: Any
     
-    init(clazz: Any) {
-        self.clazz = clazz
+    init(clazzType: Any, definition: @escaping  Definition<Any>) {
+        self.clazzType = clazzType
+        self.definition = definition
     }
     
-    static func create<T>(clazz: T) -> InstanceFactory {
-        return InstanceFactory(clazz: clazz)
+    static func create<T>(definition:@escaping  Definition<T>) -> InstanceFactory {
+        return InstanceFactory(
+            clazzType: T.self,
+            definition: definition
+        )
     }
 }
