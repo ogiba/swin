@@ -73,14 +73,3 @@ class Swin {
         return Lazy(initValue: expectedDefinition!)
     }
 }
-
-struct Lazy<T> {
-    private let initValue: Definition<Any>
-    lazy var value: T = {
-        initValue() as! T
-    }()
-    
-    init(initValue: @escaping Definition<Any>) {
-        self.initValue = initValue
-    }
-}
