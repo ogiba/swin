@@ -49,38 +49,38 @@ class Swin {
         return expectedClass!
     }
     
-//    static func inject<T>(type: T.Type) -> Lazy<T>  {
-//        guard let _swin = swin else {
-//            print(RuntimeError("test"))
-//            exit(0)
-//        }
-//        
-//        var expectedClass: T? = nil
-//        _swin.modules.forEach { module in
-//            module.factories.forEach { factory in
-//                if (factory.clazz is T) {
-//                    expectedClass = factory.clazz as? T
-//                    return
-//                }
-//                return
-//            }
-//        }
-//        
-//        if (expectedClass == nil) {
-//            print(RuntimeError("test"))
-//            exit(0)
-//        }
-//        return Lazy(initValue: expectedClass!)
-//    }
+    static func inject<T>(type: T.Type) -> Lazy<T>  {
+        guard let _swin = swin else {
+            print(RuntimeError("test"))
+            exit(0)
+        }
+        
+        var expectedDefinition: Definition<Any>? = nil
+        _swin.modules.forEach { module in
+            module.factories.forEach { factory in
+                if (factory.clazzType is T.Type) {
+                    expectedDefinition = factory.definition
+                    return
+                }
+                return
+            }
+        }
+        
+        if (expectedDefinition == nil) {
+            print(RuntimeError("test"))
+            exit(0)
+        }
+        return Lazy(initValue: expectedDefinition!)
+    }
 }
 
 struct Lazy<T> {
-    private var initValue: T
+    private let initValue: Definition<Any>
     lazy var value: T = {
-        initValue
+        initValue() as! T
     }()
     
-    init(initValue: T) {
+    init(initValue: @escaping Definition<Any>) {
         self.initValue = initValue
     }
 }
