@@ -13,7 +13,8 @@ struct SwinApp: App {
     init() {
         Swin.startSwin(modules: [
             module {
-                let _ = $0.factory { TestRepository() }
+                let _ = $0.factory { TestRepository(testMapper: Swin.get(type: TestMapper.self)) }
+                let _ = $0.factory { TestMapper() }
             }
         ])
     }

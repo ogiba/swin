@@ -8,7 +8,15 @@
 import Foundation
 
 class TestRepository {
+    
+    private let testMapper: TestMapper
+    
+    init(testMapper: TestMapper) {
+        self.testMapper = testMapper
+    }
+    
     func test(value: Int = 0) {
         print("Test \(value)")
+        testMapper.map()
     }
 }
