@@ -7,6 +7,8 @@
 
 import Foundation
 
+typealias ModuleDeclaration = (Module) -> ()
+
 class Module {
     
     var factories: [InstanceFactory] = []
@@ -17,7 +19,7 @@ class Module {
     }
 }
 
-func module(_ moduleDeclaration:@escaping (Module) -> ()) -> Module {
+func module(_ moduleDeclaration:@escaping ModuleDeclaration) -> Module {
     let module = Module()
     moduleDeclaration(module)
     return module
