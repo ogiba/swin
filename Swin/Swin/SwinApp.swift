@@ -12,9 +12,9 @@ struct SwinApp: App {
     
     init() {
         Swin.startSwin(modules: [
-            Module().factory(definition: {
-                TestRepository()
-            })
+            module {
+                let _ = $0.factory { TestRepository() }
+            }
         ])
     }
     
