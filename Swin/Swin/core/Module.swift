@@ -13,9 +13,8 @@ class Module {
     
     var factories: [InstanceFactory] = []
     
-    func factory<T>(_ definition:@escaping  Definition<T>) -> Module {
+    func factory<T>(_ definition:@escaping  Definition<T>) {
         self.factories.append(InstanceFactory.create(definition: definition))
-        return self
     }
 }
 
