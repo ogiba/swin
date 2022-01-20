@@ -8,9 +8,10 @@
 import Foundation
 import SwiftUI
 
-func startSwin(_ declaration: @escaping (Swin) -> ()) {
-    let swin = Swin.startSwin()
-    declaration(swin)
+typealias SwinAppDeclaration = (Swin) -> ()
+
+func startSwin(_ declaration: @escaping SwinAppDeclaration) {
+    declaration(Swin.startSwin())
 }
 
 func get<T>(type: T.Type) -> T {
