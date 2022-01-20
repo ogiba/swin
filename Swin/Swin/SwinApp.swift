@@ -10,16 +10,14 @@ import SwiftUI
 @main
 struct SwinApp: App {
     
-    init() {        
+    init() {
         startSwin {
             $0.modules(modules: [
                 module {
-                    $0.factory { TestRepository(testMapper: Swin.get(type: TestMapper.self)) }
-                    $0.single { TestMapper()
-                        
-                    }
-                }]
-            )
+                        $0.factory { TestRepository(testMapper: Swin.get(type: TestMapper.self)) }
+                        $0.single { TestMapper()}
+                }
+            ])
         }
     }
     
