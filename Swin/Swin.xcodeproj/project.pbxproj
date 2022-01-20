@@ -154,13 +154,11 @@
 		7A5FC53E27960D1700BC7F80 /* core */ = {
 			isa = PBXGroup;
 			children = (
+				7ABE6B89279A1D91009A4425 /* factories */,
 				7A5FC5492796268A00BC7F80 /* errors */,
 				7A5FC53F27960D5B00BC7F80 /* Swin.swift */,
 				7A5FC5432796170100BC7F80 /* Module.swift */,
-				7A5FC54C279626E800BC7F80 /* InstanceFactory.swift */,
 				7ACA7F95279784C500933125 /* Lazy.swift */,
-				7A1BB7D62798DD6800641B45 /* SingleInstanceFactory.swift */,
-				7A1BB7D82798E40A00641B45 /* Factory.swift */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -171,6 +169,16 @@
 				7A5FC54A279626B100BC7F80 /* RuntimeError.swift */,
 			);
 			path = errors;
+			sourceTree = "<group>";
+		};
+		7ABE6B89279A1D91009A4425 /* factories */ = {
+			isa = PBXGroup;
+			children = (
+				7A1BB7D82798E40A00641B45 /* Factory.swift */,
+				7A5FC54C279626E800BC7F80 /* InstanceFactory.swift */,
+				7A1BB7D62798DD6800641B45 /* SingleInstanceFactory.swift */,
+			);
+			path = factories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
