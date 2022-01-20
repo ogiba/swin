@@ -28,7 +28,9 @@ class Swin {
     func modules(modules: [Module]) {
         self.modules.append(contentsOf: modules)
     }
-    
+}
+
+extension Swin {
     fileprivate static func startSwin() -> Swin {
         if(swin == nil) {
             let swin = Swin()
@@ -36,7 +38,9 @@ class Swin {
         }
         return swin!
     }
-    
+}
+
+extension Swin {
     fileprivate static func get<T>(type: T.Type) -> T  {
         guard let _swin = swin else {
             print(RuntimeError("test"))
