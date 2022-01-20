@@ -8,16 +8,28 @@
 import Foundation
 import SwiftUI
 
+func startSwin(_ declaration: @escaping (Swin) -> ()) {
+    let swin = Swin.startSwin()
+    declaration(swin)
+}
+
+func get<T>(type: T.Type) -> T {
+    return Swin.get(type: type)
+}
+
+func inject<T>(type: T.Type) -> Lazy<T> {
+    return Swin.inject(type: type)
+}
+
 class Swin {
-    
-    static var swin: Swin?
+    private static var swin: Swin?
     var modules: [Module] = []
     
     func modules(modules: [Module]) {
         self.modules.append(contentsOf: modules)
     }
     
-    static func startSwin() -> Swin {
+    fileprivate static func startSwin() -> Swin {
         if(swin == nil) {
             let swin = Swin()
             self.swin = swin
@@ -72,17 +84,4 @@ class Swin {
         }
         return Lazy(initValue: expectedDefinition!)
     }
-}
-
-func startSwin(_ declaration: @escaping (Swin) -> ()) {
-    let swin = Swin.startSwin()
-    declaration(swin)
-}
-
-func get<T>(type: T.Type) -> T {
-    return Swin.get(type: type)
-}
-
-func inject<T>(type: T.Type) -> Lazy<T> {
-    return Swin.inject(type: type)
 }
