@@ -12,7 +12,7 @@ struct SwinApp: App {
     
     init() {
         startSwin {
-            $0.modules(modules: [
+            $0.modules([
                 module {
                     $0.factory { TestRepository(testMapper: get(type: TestMapper.self)) }
                     $0.single { TestMapper() }

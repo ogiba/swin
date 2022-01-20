@@ -24,9 +24,10 @@ func inject<T>(type: T.Type) -> Lazy<T> {
 
 class Swin {
     private static var swin: Swin?
+        
     var modules: [Module] = []
     
-    func modules(modules: [Module]) {
+    func modules(_ modules: [Module]) {
         self.modules.append(contentsOf: modules)
     }
 }
