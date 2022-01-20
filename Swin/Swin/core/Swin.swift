@@ -25,7 +25,7 @@ class Swin {
         return swin!
     }
     
-    static func get<T>(type: T.Type) -> T  {
+    fileprivate static func get<T>(type: T.Type) -> T  {
         guard let _swin = swin else {
             print(RuntimeError("test"))
             exit(0)
@@ -77,4 +77,8 @@ class Swin {
 func startSwin(_ declaration: @escaping (Swin) -> ()) {
     let swin = Swin.startSwin()
     declaration(swin)
+}
+
+func get<T>(type: T.Type) -> T {
+    return Swin.get(type: type)
 }
