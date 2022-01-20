@@ -35,7 +35,7 @@ class Swin {
         _swin.modules.forEach { module in
             module.factories.forEach { factory in
                 if (factory.clazzType is T.Type) {
-                    expectedClass = factory.definition() as? T
+                    expectedClass = factory.create(ofType: T.self)
                     return
                 }
                 return

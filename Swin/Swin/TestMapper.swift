@@ -11,5 +11,6 @@ class TestMapper {
     
     func map() {
         print("Mapping some item...")
+        print(Unmanaged.passUnretained(self).toOpaque())
     }
 }

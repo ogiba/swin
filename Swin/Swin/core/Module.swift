@@ -11,10 +11,14 @@ typealias ModuleDeclaration = (Module) -> ()
 
 class Module {
     
-    var factories: [InstanceFactory] = []
+    var factories: [Factory] = []
     
     func factory<T>(_ definition:@escaping  Definition<T>) {
         self.factories.append(InstanceFactory.create(definition: definition))
+    }
+    
+    func single<T>(_ definition:@escaping  Definition<T>) {
+        self.factories.append(SingleInstanceFactory.create(definition: definition))
     }
 }
 
