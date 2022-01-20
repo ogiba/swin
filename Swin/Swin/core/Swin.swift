@@ -49,7 +49,7 @@ class Swin {
         return expectedClass!
     }
     
-    static func inject<T>(type: T.Type) -> Lazy<T>  {
+    fileprivate static func inject<T>(type: T.Type) -> Lazy<T>  {
         guard let _swin = swin else {
             print(RuntimeError("test"))
             exit(0)
@@ -81,4 +81,8 @@ func startSwin(_ declaration: @escaping (Swin) -> ()) {
 
 func get<T>(type: T.Type) -> T {
     return Swin.get(type: type)
+}
+
+func inject<T>(type: T.Type) -> Lazy<T> {
+    return Swin.inject(type: type)
 }

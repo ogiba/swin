@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     let test = get(type: TestRepository.self)
-    var test2 = Swin.inject(type: TestRepository.self)
+    var test2 = inject(type: TestRepository.self)
     let anotherRepository = get(type: AnotherTestRepository.self)
     
     init() {
