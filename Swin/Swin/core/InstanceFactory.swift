@@ -9,16 +9,20 @@ import Foundation
 
 typealias Definition<T> = () -> T
 
-class InstanceFactory {
-    let definition: Definition<Any>
-    let clazzType: Any
+class InstanceFactory: Factory {
+    var definition: Definition<Any>
+    var clazzType: Any
     
     init(clazzType: Any, definition: @escaping  Definition<Any>) {
         self.clazzType = clazzType
         self.definition = definition
     }
     
-    static func create<T>(definition:@escaping  Definition<T>) -> InstanceFactory {
+    func create<T>(ofType: T.Type) -> T {
+        return definition() as! T
+    }
+    
+    static func create<T>(definition:@escaping  Definition<T>) -> Factory {
         return InstanceFactory(
             clazzType: T.self,
             definition: definition
