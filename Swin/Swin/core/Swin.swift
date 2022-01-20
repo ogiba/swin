@@ -11,18 +11,18 @@ import SwiftUI
 class Swin {
     
     static var swin: Swin?
-    let modules: [Module]
+    var modules: [Module] = []
     
-    init(modules: [Module]) {
-        self.modules = modules
+    func modules(modules: [Module]) {
+        self.modules.append(contentsOf: modules)
     }
     
-    static func startSwin(modules: [Module]) {
+    static func startSwin() -> Swin {
         if(swin == nil) {
-            let swin = Swin(modules: modules)
+            let swin = Swin()
             self.swin = swin
         }
-        return
+        return swin!
     }
     
     static func get<T>(type: T.Type) -> T  {
@@ -72,4 +72,9 @@ class Swin {
         }
         return Lazy(initValue: expectedDefinition!)
     }
+}
+
+func startSwin(_ declaration: @escaping (Swin) -> ()) {
+    let swin = Swin.startSwin()
+    declaration(swin)
 }
