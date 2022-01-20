@@ -87,6 +87,7 @@ extension Swin {
             print(RuntimeError("test"))
             exit(0)
         }
-        return Lazy(initValue: expectedDefinition!)
+        
+        return Lazy { expectedDefinition! }
     }
 }
