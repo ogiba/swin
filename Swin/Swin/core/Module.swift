@@ -17,7 +17,7 @@ class Module {
         self.factories.append(InstanceFactory.create(definition: definition))
     }
     
-    func single<T>(_ definition:@escaping  Definition<T>) {
+    func single<T>(_ type: T.Type? = nil, _ definition:@escaping  Definition<T>) {
         self.factories.append(SingleInstanceFactory.create(definition: definition))
     }
 }
