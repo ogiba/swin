@@ -11,11 +11,13 @@ struct ContentView: View {
     let test = get(type: TestRepository.self)
     var test2 = inject(type: TestRepository.self)
     let anotherRepository = get(type: AnotherTestRepository.self)
+    let dataRepository = get(type: DataRepository.self)
     
     init() {
         test.test()
         test2.value.test(value: 1)
         anotherRepository.callMeBaby()
+        dataRepository.loadData()
     }
     
     var body: some View {

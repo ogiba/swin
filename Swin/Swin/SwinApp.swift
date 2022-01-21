@@ -14,8 +14,9 @@ struct SwinApp: App {
         startSwin {
             $0.modules([
                 module {
-                    $0.factory { TestRepository(testMapper: get(type: TestMapper.self)) }
+                    $0.factory{ TestRepository(testMapper: get(type: TestMapper.self)) }
                     $0.single { TestMapper() }
+                    $0.factory(DataRepository.self) { TestRepository(testMapper: get(type: TestMapper.self)) }
                 },
                 module {
                     $0.factory { AnotherTestRepository() }

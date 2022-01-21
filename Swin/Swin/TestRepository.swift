@@ -7,7 +7,11 @@
 
 import Foundation
 
-class TestRepository {
+protocol DataRepository {
+    func loadData()
+}
+
+class TestRepository: DataRepository {
     
     private let testMapper: TestMapper
     
@@ -18,5 +22,9 @@ class TestRepository {
     func test(value: Int = 0) {
         print("Test \(value)")
         testMapper.map()
+    }
+    
+    func loadData() {
+        print("Loading data...")
     }
 }
