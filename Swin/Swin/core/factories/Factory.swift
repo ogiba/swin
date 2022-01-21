@@ -11,5 +11,5 @@ protocol Factory {
     var definition: Definition<Any> {get}
     var clazzType: Any {get}
     func create<T>(ofType: T.Type) -> T
-    static func create<T>(definition:@escaping  Definition<T>) -> Factory
+    static func create<T>(_ type: T.Type?, definition:@escaping  Definition<T>) -> Factory
 }

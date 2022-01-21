@@ -26,7 +26,7 @@ class SingleInstanceFactory: Factory {
         return value
     }
     
-    static func create<T>(definition: @escaping Definition<T>) -> Factory {
+    static func create<T>(_ type: T.Type?, definition: @escaping Definition<T>) -> Factory {
         return SingleInstanceFactory(
             clazzType: T.self,
             definition: definition

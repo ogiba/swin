@@ -22,7 +22,7 @@ class InstanceFactory: Factory {
         return definition() as! T
     }
     
-    static func create<T>(definition:@escaping  Definition<T>) -> Factory {
+    static func create<T>(_ type: T.Type?, definition:@escaping  Definition<T>) -> Factory {
         return InstanceFactory(
             clazzType: T.self,
             definition: definition
