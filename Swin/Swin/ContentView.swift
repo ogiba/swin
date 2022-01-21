@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
-    let test = get(type: TestRepository.self)
-    var test2 = inject(type: TestRepository.self)
-    let anotherRepository = get(type: AnotherTestRepository.self)
-    let dataRepository = get(type: DataRepository.self)
+    let test = get(TestRepository.self)
+    var test2 = inject(TestRepository.self)
+    let anotherRepository = get(AnotherTestRepository.self)
+    let dataRepository = get(DataRepository.self)
     
     init() {
         test.test()

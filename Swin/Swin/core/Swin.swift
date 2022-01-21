@@ -14,11 +14,11 @@ func startSwin(_ declaration: @escaping SwinAppDeclaration) {
     declaration(Swin.startSwin())
 }
 
-func get<T>(type: T.Type) -> T {
+func get<T>(_ type: T.Type) -> T {
     return Swin.get(type: type)
 }
 
-func inject<T>(type: T.Type) -> Lazy<T> {
+func inject<T>(_ type: T.Type) -> Lazy<T> {
     return Swin.inject(type: type)
 }
 
