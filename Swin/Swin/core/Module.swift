@@ -13,7 +13,7 @@ class Module {
     
     var factories: [Factory] = []
     
-    func factory<T>(_ definition:@escaping  Definition<T>) {
+    func factory<T>(_ type: T.Type? = nil, _ definition:@escaping  Definition<T>) {
         self.factories.append(InstanceFactory.create(definition: definition))
     }
     
