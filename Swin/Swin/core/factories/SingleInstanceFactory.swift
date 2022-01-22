@@ -26,6 +26,14 @@ class SingleInstanceFactory: InstanceFactory {
         return value
     }
     
+    func drop() {
+        self.value = nil
+    }
+    
+    func dropAll() {
+        drop()
+    }
+    
     static func create<T>(_ type: T.Type?, definition: @escaping Definition<T>) -> InstanceFactory {
         return SingleInstanceFactory(
             clazzType: T.self,

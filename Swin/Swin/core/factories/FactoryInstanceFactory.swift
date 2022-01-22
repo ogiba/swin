@@ -22,6 +22,10 @@ class FactoryInstanceFactory: InstanceFactory {
         return definition() as! T
     }
     
+    func drop() {}
+    
+    func dropAll() {}
+    
     static func create<T>(_ type: T.Type?, definition:@escaping  Definition<T>) -> InstanceFactory {
         return FactoryInstanceFactory(
             clazzType: T.self,
