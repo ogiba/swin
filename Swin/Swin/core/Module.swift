@@ -29,6 +29,7 @@ class Module {
         return (self, factoryInstance)
     }
     
+    @discardableResult
     func single<T>(_ type: T.Type? = nil, _ definition:@escaping  Definition<T>) -> (Module, InstanceFactory) {
         if factories.isFactoryRegistered(key: "\(T.self)") {
             assertionFailure("Redeclaration of: \(T.self)")
