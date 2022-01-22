@@ -7,11 +7,11 @@
 
 import Foundation
 
-typealias Factories = Dictionary<String, Factory>
+typealias Factories = Dictionary<String, InstanceFactory>
 
 extension Factories {
     func isFactoryRegistered(key: String) -> Bool {
-        return contains { (registeredKey: String, _: Factory) in
+        return contains { (registeredKey: String, _: InstanceFactory) in
             registeredKey == key
         }
     }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class SingleInstanceFactory: Factory {
+class SingleInstanceFactory: InstanceFactory {
     var definition: Definition<Any>
     var clazzType: Any
     private var value: Any? = nil
@@ -26,7 +26,7 @@ class SingleInstanceFactory: Factory {
         return value
     }
     
-    static func create<T>(_ type: T.Type?, definition: @escaping Definition<T>) -> Factory {
+    static func create<T>(_ type: T.Type?, definition: @escaping Definition<T>) -> InstanceFactory {
         return SingleInstanceFactory(
             clazzType: T.self,
             definition: definition
