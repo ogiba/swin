@@ -29,10 +29,12 @@ class Module {
         return (self, factoryInstance)
     }
     
-    func single<T>(_ type: T.Type? = nil, _ definition:@escaping  Definition<T>) {
+    func single<T>(_ type: T.Type? = nil, _ definition:@escaping  Definition<T>) -> (Module, InstanceFactory) {
         if factories.isFactoryRegistered(key: "\(T.self)") {
             assertionFailure("Redeclaration of: \(T.self)")
         }
-        self.factories["\(T.self)"] = SingleInstanceFactory.create(type, definition: definition)
+        let factoryInstance = SingleInstanceFactory.create(type, definition: definition)
+        self.factories["\(T.self)"] = factoryInstance
+        return (self, factoryInstance)
     }
 }
