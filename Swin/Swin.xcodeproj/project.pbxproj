@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7A13C812279CC04200315A6A /* Factories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A13C811279CC04200315A6A /* Factories.swift */; };
+		7A13C814279CC67500315A6A /* DefinitionBindin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A13C813279CC67500315A6A /* DefinitionBindin.swift */; };
 		7A1BB7D52798D7F200641B45 /* TestMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1BB7D42798D7F200641B45 /* TestMapper.swift */; };
 		7A1BB7D72798DD6800641B45 /* SingleInstanceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1BB7D62798DD6800641B45 /* SingleInstanceFactory.swift */; };
 		7A1BB7D92798E40A00641B45 /* InstanceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1BB7D82798E40A00641B45 /* InstanceFactory.swift */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		7A13C811279CC04200315A6A /* Factories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factories.swift; sourceTree = "<group>"; };
+		7A13C813279CC67500315A6A /* DefinitionBindin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinitionBindin.swift; sourceTree = "<group>"; };
 		7A1BB7D42798D7F200641B45 /* TestMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMapper.swift; sourceTree = "<group>"; };
 		7A1BB7D62798DD6800641B45 /* SingleInstanceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleInstanceFactory.swift; sourceTree = "<group>"; };
 		7A1BB7D82798E40A00641B45 /* InstanceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstanceFactory.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				7A5FC5432796170100BC7F80 /* Module.swift */,
 				7ACA7F95279784C500933125 /* Lazy.swift */,
 				7A13C811279CC04200315A6A /* Factories.swift */,
+				7A13C813279CC67500315A6A /* DefinitionBindin.swift */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				7A1BB7D52798D7F200641B45 /* TestMapper.swift in Sources */,
 				7A13C812279CC04200315A6A /* Factories.swift in Sources */,
 				7A1BB7D92798E40A00641B45 /* InstanceFactory.swift in Sources */,
+				7A13C814279CC67500315A6A /* DefinitionBindin.swift in Sources */,
 				7A5FC54627961A5900BC7F80 /* TestRepository.swift in Sources */,
 				7A5FC5442796170100BC7F80 /* Module.swift in Sources */,
 				7A5FC54B279626B100BC7F80 /* RuntimeError.swift in Sources */,
