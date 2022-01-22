@@ -17,13 +17,28 @@ func module(_ moduleDeclaration:@escaping ModuleDeclaration) -> Module {
 
 class Module {
     
-    var factories: Dictionary<String, Factory> = Dictionary()
+    var factories: Factories = Factories()
     
     func factory<T>(_ type: T.Type? = nil, _ definition:@escaping  Definition<T>) {
+        if factories.isFactoryRegistered(key: "\(T.self)") {
+            assertionFailure("Redeclaration of: \(T.self)")
+        }
         self.factories["\(T.self)"] = InstanceFactory.create(type, definition: definition)
     }
     
     func single<T>(_ type: T.Type? = nil, _ definition:@escaping  Definition<T>) {
+        if factories.isFactoryRegistered(key: "\(T.self)") {
+            assertionFailure("Redeclaration of: \(T.self)")
+        }
         self.factories["\(T.self)"] = SingleInstanceFactory.create(type, definition: definition)
+    }
+}
+typealias Factories = Dictionary<String, Factory>
+
+extension Factories {
+    func isFactoryRegistered(key: String) -> Bool {
+        return contains { (registeredKey: String, _: Factory) in
+            registeredKey == key
+        }
     }
 }
