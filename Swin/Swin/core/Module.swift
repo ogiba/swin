@@ -9,6 +9,12 @@ import Foundation
 
 typealias ModuleDeclaration = (Module) -> ()
 
+func module(_ moduleDeclaration:@escaping ModuleDeclaration) -> Module {
+    let module = Module()
+    moduleDeclaration(module)
+    return module
+}
+
 class Module {
     
     var factories: Dictionary<String, Factory> = Dictionary()
@@ -20,10 +26,4 @@ class Module {
     func single<T>(_ type: T.Type? = nil, _ definition:@escaping  Definition<T>) {
         self.factories["\(T.self)"] = SingleInstanceFactory.create(type, definition: definition)
     }
-}
-
-func module(_ moduleDeclaration:@escaping ModuleDeclaration) -> Module {
-    let module = Module()
-    moduleDeclaration(module)
-    return module
 }
