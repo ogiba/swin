@@ -23,7 +23,7 @@ class Module {
         if factories.isFactoryRegistered(key: "\(T.self)") {
             assertionFailure("Redeclaration of: \(T.self)")
         }
-        self.factories["\(T.self)"] = InstanceFactory.create(type, definition: definition)
+        self.factories["\(T.self)"] = FactoryInstanceFactory.create(type, definition: definition)
     }
     
     func single<T>(_ type: T.Type? = nil, _ definition:@escaping  Definition<T>) {

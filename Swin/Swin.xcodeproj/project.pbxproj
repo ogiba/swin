@@ -22,7 +22,7 @@
 		7A5FC5442796170100BC7F80 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5FC5432796170100BC7F80 /* Module.swift */; };
 		7A5FC54627961A5900BC7F80 /* TestRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5FC54527961A5900BC7F80 /* TestRepository.swift */; };
 		7A5FC54B279626B100BC7F80 /* RuntimeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5FC54A279626B100BC7F80 /* RuntimeError.swift */; };
-		7A5FC54D279626E800BC7F80 /* InstanceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5FC54C279626E800BC7F80 /* InstanceFactory.swift */; };
+		7A5FC54D279626E800BC7F80 /* FactoryInstanceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5FC54C279626E800BC7F80 /* FactoryInstanceFactory.swift */; };
 		7ABE6B88279A0581009A4425 /* AnotherTestRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABE6B87279A0581009A4425 /* AnotherTestRepository.swift */; };
 		7ACA7F96279784C500933125 /* Lazy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACA7F95279784C500933125 /* Lazy.swift */; };
 /* End PBXBuildFile section */
@@ -63,7 +63,7 @@
 		7A5FC5432796170100BC7F80 /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
 		7A5FC54527961A5900BC7F80 /* TestRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRepository.swift; sourceTree = "<group>"; };
 		7A5FC54A279626B100BC7F80 /* RuntimeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuntimeError.swift; sourceTree = "<group>"; };
-		7A5FC54C279626E800BC7F80 /* InstanceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstanceFactory.swift; sourceTree = "<group>"; };
+		7A5FC54C279626E800BC7F80 /* FactoryInstanceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryInstanceFactory.swift; sourceTree = "<group>"; };
 		7ABE6B87279A0581009A4425 /* AnotherTestRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotherTestRepository.swift; sourceTree = "<group>"; };
 		7ACA7F95279784C500933125 /* Lazy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lazy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -178,7 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				7A1BB7D82798E40A00641B45 /* Factory.swift */,
-				7A5FC54C279626E800BC7F80 /* InstanceFactory.swift */,
+				7A5FC54C279626E800BC7F80 /* FactoryInstanceFactory.swift */,
 				7A1BB7D62798DD6800641B45 /* SingleInstanceFactory.swift */,
 			);
 			path = factories;
@@ -323,7 +323,7 @@
 				7A5FC54B279626B100BC7F80 /* RuntimeError.swift in Sources */,
 				7A1BB7D72798DD6800641B45 /* SingleInstanceFactory.swift in Sources */,
 				7ABE6B88279A0581009A4425 /* AnotherTestRepository.swift in Sources */,
-				7A5FC54D279626E800BC7F80 /* InstanceFactory.swift in Sources */,
+				7A5FC54D279626E800BC7F80 /* FactoryInstanceFactory.swift in Sources */,
 				7ACA7F96279784C500933125 /* Lazy.swift in Sources */,
 				7A5FC54027960D5B00BC7F80 /* Swin.swift in Sources */,
 				7A5FC51527960BB200BC7F80 /* SwinApp.swift in Sources */,

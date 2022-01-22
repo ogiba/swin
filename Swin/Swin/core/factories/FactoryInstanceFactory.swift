@@ -9,7 +9,7 @@ import Foundation
 
 typealias Definition<T> = () -> T
 
-class InstanceFactory: Factory {
+class FactoryInstanceFactory: Factory {
     var definition: Definition<Any>
     var clazzType: Any
     
@@ -23,7 +23,7 @@ class InstanceFactory: Factory {
     }
     
     static func create<T>(_ type: T.Type?, definition:@escaping  Definition<T>) -> Factory {
-        return InstanceFactory(
+        return FactoryInstanceFactory(
             clazzType: T.self,
             definition: definition
         )
