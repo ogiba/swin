@@ -33,12 +33,3 @@ class Module {
         self.factories["\(T.self)"] = SingleInstanceFactory.create(type, definition: definition)
     }
 }
-typealias Factories = Dictionary<String, Factory>
-
-extension Factories {
-    func isFactoryRegistered(key: String) -> Bool {
-        return contains { (registeredKey: String, _: Factory) in
-            registeredKey == key
-        }
-    }
-}
