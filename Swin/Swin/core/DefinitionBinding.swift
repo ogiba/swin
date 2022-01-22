@@ -8,7 +8,9 @@
 import Foundation
 
 extension Pair where T == Module, T2 == InstanceFactory {
-    func onClose() {
-        
+    
+    @discardableResult
+    func onClose(_ closeCallback: @escaping () -> ()) -> Pair<Module, InstanceFactory> {
+        return self
     }
 }
