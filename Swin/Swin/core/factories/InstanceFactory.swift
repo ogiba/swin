@@ -8,8 +8,7 @@
 import Foundation
 
 protocol InstanceFactory {
-    var definition: Definition<Any> {get}
-    var clazzType: Any {get}
+    var beanDefinition: BeanDefinition {get}
     func create<T>(ofType: T.Type) -> T
     func drop()
     func dropAll()

@@ -8,18 +8,16 @@
 import Foundation
 
 class SingleInstanceFactory: InstanceFactory {
-    var definition: Definition<Any>
-    var clazzType: Any
+    var beanDefinition: BeanDefinition
     private var value: Any? = nil
     
-    init(clazzType: Any, definition: @escaping  Definition<Any>) {
-        self.clazzType = clazzType
-        self.definition = definition
+    init(beanDefinition: BeanDefinition) {
+        self.beanDefinition = beanDefinition
     }
 
     func create<T>(ofType: T.Type) -> T {
         guard let value = value as? T else {
-            let value = definition() as! T
+            let value = beanDefinition.definition() as! T
             self.value = value
             return value
         }
@@ -36,8 +34,10 @@ class SingleInstanceFactory: InstanceFactory {
     
     static func create<T>(_ type: T.Type?, definition: @escaping Definition<T>) -> InstanceFactory {
         return SingleInstanceFactory(
-            clazzType: T.self,
-            definition: definition
+            beanDefinition: BeanDefinition(
+                clazzType: T.self,
+                definition: definition
+            )
         )
     }
 }

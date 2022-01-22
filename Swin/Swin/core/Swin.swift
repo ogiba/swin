@@ -72,7 +72,7 @@ extension Swin {
         
         var expectedDefinition: Definition<Any>? = nil
         for module in _swin.modules {
-            expectedDefinition = module.factories["\(T.self)"]?.definition
+            expectedDefinition = module.factories["\(T.self)"]?.beanDefinition.definition
             if(expectedDefinition != nil) {
                 break
             }
