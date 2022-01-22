@@ -58,7 +58,7 @@ extension Swin {
         }
         
         if (expectedClass == nil) {
-            assertionFailure("Expeceted class not found")
+            assertionFailure("Expeceted class(\(T.self) not found")
             exit(0)
         }
         return expectedClass!
@@ -66,7 +66,7 @@ extension Swin {
     
     fileprivate static func inject<T>(type: T.Type) -> Lazy<T>  {
         guard let _swin = swin else {
-            print(RuntimeError("test"))
+            assertionFailure("Swin instance should be initalized before usage!")
             exit(0)
         }
         
@@ -79,7 +79,7 @@ extension Swin {
         }
         
         if (expectedDefinition == nil) {
-            print(RuntimeError("test"))
+            assertionFailure("Expeceted class(\(T.self) not found")
             exit(0)
         }
         
