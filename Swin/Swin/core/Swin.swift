@@ -50,18 +50,15 @@ extension Swin {
         }
         
         var expectedClass: T? = nil
-        _swin.modules.forEach { module in
-            module.factories.forEach { factory in
-                if (factory.clazzType is T.Type) {
-                    expectedClass = factory.create(ofType: T.self)
-                    return
-                }
-                return
+        for module in _swin.modules {
+            expectedClass = module.factories["\(T.self)"]?.create(ofType: T.self)
+            if(expectedClass != nil) {
+                break
             }
         }
         
         if (expectedClass == nil) {
-            print(RuntimeError("test"))
+            assertionFailure("Expeceted class not found")
             exit(0)
         }
         return expectedClass!
@@ -74,13 +71,10 @@ extension Swin {
         }
         
         var expectedDefinition: Definition<Any>? = nil
-        _swin.modules.forEach { module in
-            module.factories.forEach { factory in
-                if (factory.clazzType is T.Type) {
-                    expectedDefinition = factory.definition
-                    return
-                }
-                return
+        for module in _swin.modules {
+            expectedDefinition = module.factories["\(T.self)"]?.definition
+            if(expectedDefinition != nil) {
+                break
             }
         }
         
