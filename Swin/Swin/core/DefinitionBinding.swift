@@ -7,6 +7,8 @@
 
 import Foundation
 
-extension Instance {
-    
+extension Pair where T == Module, T2 == InstanceFactory {
+    func onClose() {
+        
+    }
 }
