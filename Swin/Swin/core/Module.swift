@@ -8,7 +8,6 @@
 import Foundation
 
 typealias ModuleDeclaration = (Module) -> ()
-typealias Instance = (Module, InstanceFactory)
 
 func module(_ moduleDeclaration:@escaping ModuleDeclaration) -> Module {
     let module = Module()
@@ -31,12 +30,12 @@ class Module {
     }
     
     @discardableResult
-    func single<T>(_ type: T.Type? = nil, _ definition:@escaping  Definition<T>) -> Instance {
+    func single<T>(_ type: T.Type? = nil, _ definition:@escaping  Definition<T>) -> Pair<Module, InstanceFactory> {
         if factories.isFactoryRegistered(key: "\(T.self)") {
             assertionFailure("Redeclaration of: \(T.self)")
         }
         let factoryInstance = SingleInstanceFactory.create(type, definition: definition)
         self.factories["\(T.self)"] = factoryInstance
-        return (self, factoryInstance)
+        return Pair(first: self, second: factoryInstance)
     }
 }
