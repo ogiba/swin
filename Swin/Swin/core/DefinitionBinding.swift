@@ -10,7 +10,8 @@ import Foundation
 extension Pair where T == Module, T2 == InstanceFactory {
     
     @discardableResult
-    func onClose(_ closeCallback: @escaping () -> ()) -> Pair<Module, InstanceFactory> {
+    mutating func onClose<T>(_ type: T.Type? = nil, closeCallback: @escaping OnCloseCallback<T>) -> Pair<Module, InstanceFactory> {
+        second.beanDefinition.callbacks = Callbacks<Any>(onClose: { closeCallback($0 as? T) })
         return self
     }
 }
