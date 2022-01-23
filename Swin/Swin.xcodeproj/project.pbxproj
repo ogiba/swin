@@ -16,6 +16,7 @@
 		7A1BB7D72798DD6800641B45 /* SingleInstanceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1BB7D62798DD6800641B45 /* SingleInstanceFactory.swift */; };
 		7A1BB7D92798E40A00641B45 /* InstanceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1BB7D82798E40A00641B45 /* InstanceFactory.swift */; };
 		7A418886279E211E005FAEEF /* Qualifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A418885279E211E005FAEEF /* Qualifier.swift */; };
+		7A418889279E21A8005FAEEF /* StringQualifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A418888279E21A8005FAEEF /* StringQualifier.swift */; };
 		7A5FC51527960BB200BC7F80 /* SwinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5FC51427960BB200BC7F80 /* SwinApp.swift */; };
 		7A5FC51727960BB200BC7F80 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5FC51627960BB200BC7F80 /* ContentView.swift */; };
 		7A5FC51927960BB300BC7F80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A5FC51827960BB300BC7F80 /* Assets.xcassets */; };
@@ -59,6 +60,7 @@
 		7A1BB7D62798DD6800641B45 /* SingleInstanceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleInstanceFactory.swift; sourceTree = "<group>"; };
 		7A1BB7D82798E40A00641B45 /* InstanceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstanceFactory.swift; sourceTree = "<group>"; };
 		7A418885279E211E005FAEEF /* Qualifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Qualifier.swift; sourceTree = "<group>"; };
+		7A418888279E21A8005FAEEF /* StringQualifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringQualifier.swift; sourceTree = "<group>"; };
 		7A5FC51127960BB200BC7F80 /* Swin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A5FC51427960BB200BC7F80 /* SwinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinApp.swift; sourceTree = "<group>"; };
 		7A5FC51627960BB200BC7F80 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				7A418885279E211E005FAEEF /* Qualifier.swift */,
+				7A418888279E21A8005FAEEF /* StringQualifier.swift */,
 			);
 			path = qualifier;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				7A1BB7D72798DD6800641B45 /* SingleInstanceFactory.swift in Sources */,
 				7ABE6B88279A0581009A4425 /* AnotherTestRepository.swift in Sources */,
 				7A5FC54D279626E800BC7F80 /* FactoryInstanceFactory.swift in Sources */,
+				7A418889279E21A8005FAEEF /* StringQualifier.swift in Sources */,
 				7ACA7F96279784C500933125 /* Lazy.swift in Sources */,
 				7A13C81A279CCCA200315A6A /* Callbacks.swift in Sources */,
 				7A5FC54027960D5B00BC7F80 /* Swin.swift in Sources */,
