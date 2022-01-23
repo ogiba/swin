@@ -9,5 +9,5 @@ import Foundation
 
 struct Pair<T, T2> {
     let first: T
-    let second: T2
+    var second: T2
 }
