@@ -15,6 +15,7 @@
 		7A1BB7D52798D7F200641B45 /* TestMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1BB7D42798D7F200641B45 /* TestMapper.swift */; };
 		7A1BB7D72798DD6800641B45 /* SingleInstanceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1BB7D62798DD6800641B45 /* SingleInstanceFactory.swift */; };
 		7A1BB7D92798E40A00641B45 /* InstanceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1BB7D82798E40A00641B45 /* InstanceFactory.swift */; };
+		7A418886279E211E005FAEEF /* Qualifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A418885279E211E005FAEEF /* Qualifier.swift */; };
 		7A5FC51527960BB200BC7F80 /* SwinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5FC51427960BB200BC7F80 /* SwinApp.swift */; };
 		7A5FC51727960BB200BC7F80 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5FC51627960BB200BC7F80 /* ContentView.swift */; };
 		7A5FC51927960BB300BC7F80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A5FC51827960BB300BC7F80 /* Assets.xcassets */; };
@@ -57,6 +58,7 @@
 		7A1BB7D42798D7F200641B45 /* TestMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMapper.swift; sourceTree = "<group>"; };
 		7A1BB7D62798DD6800641B45 /* SingleInstanceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleInstanceFactory.swift; sourceTree = "<group>"; };
 		7A1BB7D82798E40A00641B45 /* InstanceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstanceFactory.swift; sourceTree = "<group>"; };
+		7A418885279E211E005FAEEF /* Qualifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Qualifier.swift; sourceTree = "<group>"; };
 		7A5FC51127960BB200BC7F80 /* Swin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A5FC51427960BB200BC7F80 /* SwinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinApp.swift; sourceTree = "<group>"; };
 		7A5FC51627960BB200BC7F80 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -101,6 +103,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A418887279E2168005FAEEF /* qualifier */ = {
+			isa = PBXGroup;
+			children = (
+				7A418885279E211E005FAEEF /* Qualifier.swift */,
+			);
+			path = qualifier;
+			sourceTree = "<group>";
+		};
 		7A5FC50827960BB100BC7F80 = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +174,7 @@
 		7A5FC53E27960D1700BC7F80 /* core */ = {
 			isa = PBXGroup;
 			children = (
+				7A418887279E2168005FAEEF /* qualifier */,
 				7ABE6B89279A1D91009A4425 /* factories */,
 				7A5FC5492796268A00BC7F80 /* errors */,
 				7A5FC53F27960D5B00BC7F80 /* Swin.swift */,
@@ -330,6 +341,7 @@
 				7A1BB7D52798D7F200641B45 /* TestMapper.swift in Sources */,
 				7A13C812279CC04200315A6A /* Factories.swift in Sources */,
 				7A1BB7D92798E40A00641B45 /* InstanceFactory.swift in Sources */,
+				7A418886279E211E005FAEEF /* Qualifier.swift in Sources */,
 				7A13C814279CC67500315A6A /* DefinitionBinding.swift in Sources */,
 				7A5FC54627961A5900BC7F80 /* TestRepository.swift in Sources */,
 				7A5FC5442796170100BC7F80 /* Module.swift in Sources */,

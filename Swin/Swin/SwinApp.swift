@@ -34,7 +34,7 @@ struct SwinApp: App {
 //        .onChange(of: scenePhase) { (newPhase) in
 //            switch newPhase {
 //            case .background:
-//                swin
+//                swin.close()
 //            default:
 //                print("test")
 //            }
