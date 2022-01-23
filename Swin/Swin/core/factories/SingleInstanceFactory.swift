@@ -25,6 +25,7 @@ class SingleInstanceFactory: InstanceFactory {
     }
     
     func drop() {
+        beanDefinition.callbacks.onClose?(value)
         self.value = nil
     }
     

@@ -20,7 +20,9 @@ class FactoryInstanceFactory: InstanceFactory {
         return beanDefinition.definition() as! T
     }
     
-    func drop() {}
+    func drop() {
+        self.beanDefinition.callbacks.onClose?(nil)
+    }
     
     func dropAll() {}
     

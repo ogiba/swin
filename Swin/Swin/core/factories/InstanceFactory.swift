@@ -8,10 +8,8 @@
 import Foundation
 
 protocol InstanceFactory {
-    var beanDefinition: BeanDefinition {get}
+    var beanDefinition: BeanDefinition {get set}
     func create<T>(ofType: T.Type) -> T
     func drop()
     func dropAll()
-    static func create<T>(_ type: T.Type?, definition:@escaping  Definition<T>) -> InstanceFactory
-    
 }
