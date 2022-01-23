@@ -38,4 +38,9 @@ class Module {
         self.factories["\(T.self)"] = factoryInstance
         return Pair(first: self, second: factoryInstance)
     }
+    
+    func close() {
+        factories.compactMap({$0.value}).forEach {$0.dropAll()}
+        factories.removeAll()
+    }
 }

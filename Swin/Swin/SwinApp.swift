@@ -9,13 +9,14 @@ import SwiftUI
 
 @main
 struct SwinApp: App {
+//    @Environment(\.scenePhase) var scenePhase
     
+    let swin: Swin
     init() {
-        startSwin {
+        swin = startSwin {
             $0.modules([
                 module {
                     $0.factory{ TestRepository(testMapper: get(TestMapper.self)) }
-                    $0.single { TestMapper() }
                     $0.single { TestMapper() }
                     $0.factory(DataRepository.self) { TestRepository(testMapper: get(TestMapper.self)) }
                 },
@@ -30,5 +31,13 @@ struct SwinApp: App {
         WindowGroup {
             ContentView()
         }
+//        .onChange(of: scenePhase) { (newPhase) in
+//            switch newPhase {
+//            case .background:
+//                swin
+//            default:
+//                print("test")
+//            }
+//        }
     }
 }

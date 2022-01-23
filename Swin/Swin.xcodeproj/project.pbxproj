@@ -11,6 +11,7 @@
 		7A13C814279CC67500315A6A /* DefinitionBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A13C813279CC67500315A6A /* DefinitionBinding.swift */; };
 		7A13C816279CC71700315A6A /* Pair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A13C815279CC71700315A6A /* Pair.swift */; };
 		7A13C818279CCAB800315A6A /* BeanDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A13C817279CCAB800315A6A /* BeanDefinition.swift */; };
+		7A13C81A279CCCA200315A6A /* Callbacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A13C819279CCCA200315A6A /* Callbacks.swift */; };
 		7A1BB7D52798D7F200641B45 /* TestMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1BB7D42798D7F200641B45 /* TestMapper.swift */; };
 		7A1BB7D72798DD6800641B45 /* SingleInstanceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1BB7D62798DD6800641B45 /* SingleInstanceFactory.swift */; };
 		7A1BB7D92798E40A00641B45 /* InstanceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1BB7D82798E40A00641B45 /* InstanceFactory.swift */; };
@@ -52,6 +53,7 @@
 		7A13C813279CC67500315A6A /* DefinitionBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinitionBinding.swift; sourceTree = "<group>"; };
 		7A13C815279CC71700315A6A /* Pair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pair.swift; sourceTree = "<group>"; };
 		7A13C817279CCAB800315A6A /* BeanDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeanDefinition.swift; sourceTree = "<group>"; };
+		7A13C819279CCCA200315A6A /* Callbacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Callbacks.swift; sourceTree = "<group>"; };
 		7A1BB7D42798D7F200641B45 /* TestMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMapper.swift; sourceTree = "<group>"; };
 		7A1BB7D62798DD6800641B45 /* SingleInstanceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleInstanceFactory.swift; sourceTree = "<group>"; };
 		7A1BB7D82798E40A00641B45 /* InstanceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstanceFactory.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				7A13C813279CC67500315A6A /* DefinitionBinding.swift */,
 				7A13C815279CC71700315A6A /* Pair.swift */,
 				7A13C817279CCAB800315A6A /* BeanDefinition.swift */,
+				7A13C819279CCCA200315A6A /* Callbacks.swift */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				7ABE6B88279A0581009A4425 /* AnotherTestRepository.swift in Sources */,
 				7A5FC54D279626E800BC7F80 /* FactoryInstanceFactory.swift in Sources */,
 				7ACA7F96279784C500933125 /* Lazy.swift in Sources */,
+				7A13C81A279CCCA200315A6A /* Callbacks.swift in Sources */,
 				7A5FC54027960D5B00BC7F80 /* Swin.swift in Sources */,
 				7A5FC51527960BB200BC7F80 /* SwinApp.swift in Sources */,
 				7A13C818279CCAB800315A6A /* BeanDefinition.swift in Sources */,

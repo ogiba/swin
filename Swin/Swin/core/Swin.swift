@@ -10,8 +10,11 @@ import SwiftUI
 
 typealias SwinAppDeclaration = (Swin) -> ()
 
-func startSwin(_ declaration: @escaping SwinAppDeclaration) {
-    declaration(Swin.startSwin())
+@discardableResult
+func startSwin(_ declaration: @escaping SwinAppDeclaration) -> Swin {
+    let swin = Swin.startSwin()
+    declaration(swin)
+    return swin
 }
 
 func get<T>(_ type: T.Type) -> T {
@@ -29,6 +32,10 @@ class Swin {
     
     func modules(_ modules: [Module]) {
         self.modules.append(contentsOf: modules)
+    }
+    
+    func close() {
+        modules.forEach { $0.close() }
     }
 }
 
