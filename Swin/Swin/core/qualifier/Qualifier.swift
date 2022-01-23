@@ -12,3 +12,7 @@ protocol Qualifier {
 }
 
 typealias QualifierValue = String
+
+func named(name: String) -> Qualifier {
+    return StringQualifier(value: name)
+}
