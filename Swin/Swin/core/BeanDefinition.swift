@@ -13,3 +13,8 @@ struct BeanDefinition {
     var qualifier: Qualifier? = nil
     var callbacks: Callbacks<Any> = Callbacks(onClose: nil)
 }
+
+func indexKey<T>(_ type: T.Type, qualifier: Qualifier?) -> String {
+    let tq = qualifier?.value ?? ""
+    return "\(T.self):\(tq)"
+}
