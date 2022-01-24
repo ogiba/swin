@@ -26,12 +26,7 @@ class FactoryInstanceFactory: InstanceFactory {
     
     func dropAll() {}
     
-    static func create<T>(_ type: T.Type?, qualifier: Qualifier?, definition:@escaping  Definition<T>) -> InstanceFactory {
-        return FactoryInstanceFactory(
-            beanDefintion: BeanDefinition(
-                clazzType: T.self,
-                definition: definition
-            )
-        )
+    static func create(beanDefinition: BeanDefinition) -> InstanceFactory {
+        return FactoryInstanceFactory(beanDefintion: beanDefinition)
     }
 }
