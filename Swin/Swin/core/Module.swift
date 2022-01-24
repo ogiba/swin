@@ -28,19 +28,24 @@ class Module {
         if factories.isFactoryRegistered(key: "\(T.self)") {
             assertionFailure("Redeclaration of: \(T.self)")
         }
-        let factoryInstance = FactoryInstanceFactory.create(type, qualifier: qualifier, definition: definition)
-        let indexKey = indexKey(T.self, qualifier: qualifier)
+        let def = createDefinition(type, qualifier: qualifier, definition: definition)
+        let factoryInstance = FactoryInstanceFactory.create(beanDefinition: def)
+        let indexKey = indexKey(def.clazzType as! T.Type, qualifier: qualifier)
         self.factories[indexKey] = factoryInstance
         return Pair(first: self, second: factoryInstance)
     }
     
     @discardableResult
-    func single<T>(_ type: T.Type? = nil, _ definition:@escaping  Definition<T>) -> Pair<Module, InstanceFactory> {
+    func single<T>(
+            _ type: T.Type? = nil,
+            qualifier: Qualifier? = nil,
+            _ definition:@escaping Definition<T>
+    ) -> Pair<Module, InstanceFactory> {
         if factories.isFactoryRegistered(key: "\(T.self)") {
             assertionFailure("Redeclaration of: \(T.self)")
         }
         let factoryInstance = SingleInstanceFactory.create(type, definition: definition)
-        self.factories[indexKey(T.self, qualifier: nil)] = factoryInstance
+        self.factories[indexKey(T.self, qualifier: qualifier)] = factoryInstance
         return Pair(first: self, second: factoryInstance)
     }
     
