@@ -17,8 +17,8 @@ func startSwin(_ declaration: @escaping SwinAppDeclaration) -> Swin {
     return swin
 }
 
-func get<T>(_ type: T.Type) -> T {
-    return Swin.get(type: type)
+func get<T>(_ type: T.Type, qualifier: Qualifier? = nil) -> T {
+    return Swin.get(type: type, qualifier: qualifier)
 }
 
 func inject<T>(_ type: T.Type) -> Lazy<T> {
@@ -50,7 +50,7 @@ extension Swin {
 }
 
 extension Swin {
-    fileprivate static func get<T>(type: T.Type) -> T  {
+    fileprivate static func get<T>(type: T.Type, qualifier: Qualifier? = nil) -> T  {
         guard let _swin = swin else {
             print(RuntimeError("test"))
             exit(0)
@@ -58,7 +58,7 @@ extension Swin {
         
         var expectedClass: T? = nil
         for module in _swin.modules {
-            expectedClass = module.factories["\(T.self)"]?.create(ofType: T.self)
+            expectedClass = module.factories[indexKey(T.self, qualifier: qualifier)]?.create(ofType: T.self)
             if(expectedClass != nil) {
                 break
             }
@@ -79,7 +79,7 @@ extension Swin {
         
         var expectedDefinition: Definition<Any>? = nil
         for module in _swin.modules {
-            expectedDefinition = module.factories["\(T.self)"]?.beanDefinition.definition
+            expectedDefinition = module.factories[indexKey(T.self, qualifier: nil)]?.beanDefinition.definition
             if(expectedDefinition != nil) {
                 break
             }
