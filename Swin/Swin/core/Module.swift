@@ -30,7 +30,7 @@ class Module {
         }
         let def = createDefinition(type, qualifier: qualifier, definition: definition)
         let factoryInstance = FactoryInstanceFactory.create(beanDefinition: def)
-        let indexKey = indexKey(def.clazzType as! T.Type, qualifier: qualifier)
+        let indexKey = indexKey(def.clazzType as! T.Type, qualifier: def.qualifier)
         self.factories[indexKey] = factoryInstance
         return Pair(first: self, second: factoryInstance)
     }
@@ -46,7 +46,8 @@ class Module {
         }
         let def = createDefinition(type, qualifier: qualifier, definition: definition)
         let factoryInstance = SingleInstanceFactory.create(beanDefinition: def)
-        self.factories[indexKey(def.clazzType as! T.Type, qualifier: def.qualifier)] = factoryInstance
+        let indexKey = indexKey(def.clazzType as! T.Type, qualifier: def.qualifier)
+        self.factories[indexKey] = factoryInstance
         return Pair(first: self, second: factoryInstance)
     }
     
