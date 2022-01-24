@@ -11,7 +11,7 @@ struct ContentView: View {
     let test = get(TestRepository.self)
     var test2 = inject(TestRepository.self)
     let anotherRepository = get(AnotherTestRepository.self)
-    let dataRepository = get(DataRepository.self)
+    let dataRepository = get(DataRepository.self, qualifier: named(name: "test"))
     
     init() {
         test.test()
