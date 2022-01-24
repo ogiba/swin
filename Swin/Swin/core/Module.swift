@@ -44,8 +44,9 @@ class Module {
         if factories.isFactoryRegistered(key: "\(T.self)") {
             assertionFailure("Redeclaration of: \(T.self)")
         }
-        let factoryInstance = SingleInstanceFactory.create(type, qualifier: qualifier, definition: definition)
-        self.factories[indexKey(T.self, qualifier: qualifier)] = factoryInstance
+        let def = createDefinition(type, qualifier: qualifier, definition: definition)
+        let factoryInstance = SingleInstanceFactory.create(beanDefinition: def)
+        self.factories[indexKey(def.clazzType as! T.Type, qualifier: def.qualifier)] = factoryInstance
         return Pair(first: self, second: factoryInstance)
     }
     

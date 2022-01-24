@@ -33,14 +33,8 @@ class SingleInstanceFactory: InstanceFactory {
         drop()
     }
     
-    static func create<T>(_ type: T.Type?, qualifier: Qualifier?, definition: @escaping Definition<T>) -> InstanceFactory {
-        return SingleInstanceFactory(
-            beanDefinition: BeanDefinition(
-                clazzType: T.self,
-                definition: definition,
-                qualifier: qualifier
-            )
-        )
+    static func create(beanDefinition: BeanDefinition) -> InstanceFactory {
+        return SingleInstanceFactory(beanDefinition: beanDefinition)
     }
 }
 
