@@ -29,7 +29,8 @@ class Module {
             assertionFailure("Redeclaration of: \(T.self)")
         }
         let factoryInstance = FactoryInstanceFactory.create(type, qualifier: qualifier, definition: definition)
-        self.factories["\(T.self)"] = factoryInstance
+        let indexKey = indexKey(T.self, qualifier: qualifier)
+        self.factories[indexKey] = factoryInstance
         return Pair(first: self, second: factoryInstance)
     }
     
@@ -39,7 +40,7 @@ class Module {
             assertionFailure("Redeclaration of: \(T.self)")
         }
         let factoryInstance = SingleInstanceFactory.create(type, definition: definition)
-        self.factories["\(T.self)"] = factoryInstance
+        self.factories[indexKey(T.self, qualifier: nil)] = factoryInstance
         return Pair(first: self, second: factoryInstance)
     }
     
