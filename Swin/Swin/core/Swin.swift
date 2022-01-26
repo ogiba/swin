@@ -34,8 +34,16 @@ class Swin {
         self.modules.append(contentsOf: modules)
     }
     
+    func start() {
+        
+    }
+    
     func close() {
         modules.forEach { $0.close() }
+    }
+    
+    private func createEagerInstances() {
+        
     }
 }
 
@@ -43,6 +51,7 @@ extension Swin {
     fileprivate static func startSwin() -> Swin {
         if(swin == nil) {
             let swin = Swin()
+            swin.start()
             self.swin = swin
         }
         return swin!
