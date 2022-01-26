@@ -19,6 +19,9 @@ class InstanceRegistry {
     
     private func loadModule(module: Module) {
         module.factories.forEach { (indexKey, factory) in
+            if instances.isFactoryRegistered(key: indexKey) {
+                assertionFailure("Already existing definition for \(factory.beanDefinition) at $mapping")
+            }
             instances[indexKey] = factory
         }
     }
