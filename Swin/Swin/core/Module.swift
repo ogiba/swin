@@ -17,6 +17,8 @@ func module(_ moduleDeclaration:@escaping ModuleDeclaration) -> Module {
 
 class Module {
     
+    var eagerInstances: Set<HashableInstanceFactory> = Set()
+    
     var factories: Factories = Factories()
     
     @discardableResult
@@ -39,6 +41,7 @@ class Module {
     func single<T>(
             _ type: T.Type? = nil,
             qualifier: Qualifier? = nil,
+            createdAtStart: Bool = false,
             _ definition:@escaping Definition<T>
     ) -> Pair<Module, InstanceFactory> {
         if factories.isFactoryRegistered(key: "\(T.self)") {
@@ -48,6 +51,9 @@ class Module {
         let factoryInstance = SingleInstanceFactory.create(beanDefinition: def)
         let indexKey = indexKey(def.clazzType as! T.Type, qualifier: def.qualifier)
         self.factories[indexKey] = factoryInstance
+        if(createdAtStart) {
+            eagerInstances.update(with: HashableInstanceFactory(instanceFactory: factoryInstance))
+        }
         return Pair(first: self, second: factoryInstance)
     }
     
