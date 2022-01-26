@@ -17,6 +17,7 @@
 		7A1BB7D92798E40A00641B45 /* InstanceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1BB7D82798E40A00641B45 /* InstanceFactory.swift */; };
 		7A418886279E211E005FAEEF /* Qualifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A418885279E211E005FAEEF /* Qualifier.swift */; };
 		7A418889279E21A8005FAEEF /* StringQualifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A418888279E21A8005FAEEF /* StringQualifier.swift */; };
+		7A4F4C9B27A20FBC0077BECD /* InstanceRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4F4C9A27A20FBC0077BECD /* InstanceRegistry.swift */; };
 		7A5FC51527960BB200BC7F80 /* SwinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5FC51427960BB200BC7F80 /* SwinApp.swift */; };
 		7A5FC51727960BB200BC7F80 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5FC51627960BB200BC7F80 /* ContentView.swift */; };
 		7A5FC51927960BB300BC7F80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A5FC51827960BB300BC7F80 /* Assets.xcassets */; };
@@ -61,6 +62,7 @@
 		7A1BB7D82798E40A00641B45 /* InstanceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstanceFactory.swift; sourceTree = "<group>"; };
 		7A418885279E211E005FAEEF /* Qualifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Qualifier.swift; sourceTree = "<group>"; };
 		7A418888279E21A8005FAEEF /* StringQualifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringQualifier.swift; sourceTree = "<group>"; };
+		7A4F4C9A27A20FBC0077BECD /* InstanceRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstanceRegistry.swift; sourceTree = "<group>"; };
 		7A5FC51127960BB200BC7F80 /* Swin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A5FC51427960BB200BC7F80 /* SwinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinApp.swift; sourceTree = "<group>"; };
 		7A5FC51627960BB200BC7F80 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				7A13C815279CC71700315A6A /* Pair.swift */,
 				7A13C817279CCAB800315A6A /* BeanDefinition.swift */,
 				7A13C819279CCCA200315A6A /* Callbacks.swift */,
+				7A4F4C9A27A20FBC0077BECD /* InstanceRegistry.swift */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				7A418886279E211E005FAEEF /* Qualifier.swift in Sources */,
 				7A13C814279CC67500315A6A /* DefinitionBinding.swift in Sources */,
 				7A5FC54627961A5900BC7F80 /* TestRepository.swift in Sources */,
+				7A4F4C9B27A20FBC0077BECD /* InstanceRegistry.swift in Sources */,
 				7A5FC5442796170100BC7F80 /* Module.swift in Sources */,
 				7A5FC54B279626B100BC7F80 /* RuntimeError.swift in Sources */,
 				7A1BB7D72798DD6800641B45 /* SingleInstanceFactory.swift in Sources */,
