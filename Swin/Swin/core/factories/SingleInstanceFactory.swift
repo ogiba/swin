@@ -8,8 +8,10 @@
 import Foundation
 
 class SingleInstanceFactory: InstanceFactory {
-    var beanDefinition: BeanDefinition
     private var value: Any? = nil
+    
+    var identifier: String { get { beanDefinition.clazzType as! String } }
+    var beanDefinition: BeanDefinition
     
     init(beanDefinition: BeanDefinition) {
         self.beanDefinition = beanDefinition

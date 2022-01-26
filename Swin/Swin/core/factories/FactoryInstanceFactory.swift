@@ -10,6 +10,8 @@ import Foundation
 typealias Definition<T> = () -> T
 
 class FactoryInstanceFactory: InstanceFactory {
+    var identifier: String { get { beanDefinition.clazzType as! String } }
+    
     var beanDefinition: BeanDefinition
     
     init(beanDefintion: BeanDefinition) {
