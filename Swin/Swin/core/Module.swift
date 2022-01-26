@@ -9,17 +9,22 @@ import Foundation
 
 typealias ModuleDeclaration = (Module) -> ()
 
-func module(_ moduleDeclaration:@escaping ModuleDeclaration) -> Module {
-    let module = Module()
+func module(createdAtStart: Bool = false, _ moduleDeclaration:@escaping ModuleDeclaration) -> Module {
+    let module = Module(createdAtStart)
     moduleDeclaration(module)
     return module
 }
 
 class Module {
+    let createdAtStart: Bool
     
     var eagerInstances: Set<HashableInstanceFactory> = Set()
     
     var factories: Factories = Factories()
+    
+    init(_ createdAtStart: Bool = false) {
+        self.createdAtStart = createdAtStart
+    }
     
     @discardableResult
     func factory<T>(
@@ -51,7 +56,7 @@ class Module {
         let factoryInstance = SingleInstanceFactory.create(beanDefinition: def)
         let indexKey = indexKey(def.clazzType as! T.Type, qualifier: def.qualifier)
         self.factories[indexKey] = factoryInstance
-        if(createdAtStart) {
+        if(createdAtStart || self.createdAtStart) {
             eagerInstances.update(with: HashableInstanceFactory(instanceFactory: factoryInstance))
         }
         return Pair(first: self, second: factoryInstance)
